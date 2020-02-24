@@ -121,6 +121,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/layout_navigation_bottom"
         app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
 
@@ -254,6 +256,7 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_navigation_bottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_70dp"
         android:background="@drawable/bottom_bar_curvy"
@@ -306,9 +309,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_navigation_bottom"
+        android:id="@+id/layout_fb_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -317,6 +321,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_50dp"
             android:layout_marginBottom="@dimen/margin_5dp"
+            android:alpha="0.0"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/layout_fb_hotspots"
@@ -327,7 +332,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:src="@drawable/events_icon" />
+                android:src="@drawable/events_icon"
+                app:backgroundTint="@color/colorGrey" />
 
             <TextView
                 android:id="@+id/tv_events_fb"
@@ -335,7 +341,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_5dp"
                 android:text="@string/text_events"
-                android:textColor="@color/colorLightViolet"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size_12sp" />
         </LinearLayout>
 
@@ -345,6 +351,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_40dp"
             android:layout_marginBottom="@dimen/margin_10dp"
+            android:alpha="0.0"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -355,7 +362,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:src="@drawable/hotspot_icon" />
+                android:src="@drawable/hotspot_icon"
+                app:backgroundTint="@color/colorGrey" />
 
             <TextView
                 android:id="@+id/tv_hotspots_fb"
@@ -363,7 +371,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_5dp"
                 android:text="@string/text_hotspots"
-                android:textColor="@color/colorLightViolet"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size_12sp" />
         </LinearLayout>
 
@@ -373,6 +381,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_50dp"
             android:layout_marginBottom="@dimen/margin_5dp"
+            android:alpha="0.0"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/layout_fb_map"
@@ -383,7 +392,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:src="@drawable/attarctions_icon" />
+                android:src="@drawable/attarctions_icon"
+                app:backgroundTint="@color/colorGrey" />
 
             <TextView
                 android:id="@+id/tv_attractions_fb"
@@ -391,7 +401,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_5dp"
                 android:text="@string/text_attractions"
-                android:textColor="@color/colorLightViolet"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size_12sp" />
         </LinearLayout>
 
@@ -401,6 +411,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_40dp"
             android:layout_marginBottom="@dimen/margin_10dp"
+            android:alpha="0.0"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -411,7 +422,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:src="@drawable/small_grey_location_pin" />
+                android:src="@drawable/small_grey_location_pin"
+                app:backgroundTint="@color/colorGrey" />
 
             <TextView
                 android:id="@+id/tv_map_fb"
@@ -419,7 +431,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_5dp"
                 android:text="@string/text_map"
-                android:textColor="@color/colorLightViolet"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size_12sp" />
         </LinearLayout>
 
